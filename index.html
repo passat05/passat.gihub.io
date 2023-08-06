@@ -1,23 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Power BI Report</title>
   <style>
     body {
-      background-color: white;
-      color: white;
-      font-family: Arial, sans-serif;
-    }
-    h1, p {
-      margin: 20px;
+      margin: 0; /* Remove default margin */
     }
     .blue-background {
-      background-color: black;
-      padding: 20px;
+      background-color: blue;
+      /* Make the div take up the entire viewport */
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      /* Center the iframe within the div */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .fullscreen-iframe {
+      /* Set the iframe to take up the entire div */
+      width: 100%;
+      height: 100%;
+      border: 0; /* Remove iframe border */
     }
   </style>
 </head>
 <body>
- <iframe title="Report Section" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiYjc1M2VmN2EtNjlhMC00Nzk3LWIyODMtMGE3OTIzOGM1YmVlIiwidCI6ImVkZDU3Mjk1LTMzNTMtNGEzMS1hNDQ3LTJlOTI5NmZhYjY5MyIsImMiOjEwfQ%3D%3D" frameborder="0" style="border:0" allowFullScreen="true"></iframe>
+  <div class="blue-background">
+    <iframe class="fullscreen-iframe" title="Report Section" src="https://app.powerbi.com/view?r=eyJrIjoiYjc1M2VmN2EtNjlhMC00Nzk3LWIyODMtMGE3OTIzOGM1YmVlIiwidCI6ImVkZDU3Mjk1LTMzNTMtNGEzMS1hNDQ3LTJlOTI5NmZhYjY5MyIsImMiOjEwfQ%3D%3D" allowFullScreen="true"></iframe>
+  </div>
 </body>
 </html>
-
