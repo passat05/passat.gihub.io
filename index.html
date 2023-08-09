@@ -6,6 +6,19 @@
     body {
       margin: 0; /* Remove default margin */
     }
+    .white-background {
+      background-color: white;
+      /* Make the div take up the entire viewport */
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      /* Center the iframe within the div */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     .fullscreen-iframe {
       /* Set the iframe to take up the entire div */
       width: 100%;
@@ -15,8 +28,9 @@
   </style>
 </head>
 <body>
-  <div>
-    <iframe class="fullscreen-iframe" title="Report Section" src="https://app.powerbi.com/view?r=eyJrIjoiNDZhNmYzNDctMzJhMy00NmI0LWI2NWMtNGRjMzAxZWQ1Mjk2IiwidCI6ImVkZDU3Mjk1LTMzNTMtNGEzMS1hNDQ3LTJlOTI5NmZhYjY5MyIsImMiOjEwfQ%3D%3D" allowFullScreen="true"></iframe>
+  <div class="white-background">
+    <iframe class="fullscreen-iframe" title="Report Section" src="https://app.powerbi.com/view?r=eyJrIjoiN2VlOThmYTYtYWJlZi00ZDE0LWI2MjQtYWYxOTY4NjU1MGFmIiwidCI6ImVkZDU3Mjk1LTMzNTMtNGEzMS1hNDQ3LTJlOTI5NmZhYjY5MyIsImMiOjEwfQ%3D%3D" allowFullScreen="true"></iframe>
   </div>
 </body>
 </html>
+
